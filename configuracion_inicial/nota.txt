@@ -1,0 +1,17 @@
+a cada uno hay que realizar un source install/setup.bash
+
+terminal 1
+
+    ros2 launch f1_12th_simulator_g01 launch_sim.launch.py world:=src/f1_12th_simulator_g01/worlds/BigRoom2.world
+
+terminal 2
+
+    ros2 launch f1_12th_simulator_g01 joystick.launch.py
+
+terminal 3
+
+    rviz2 -d src/f1_12th_simulator_g01/description/rviz_model.rviz 
+
+terminal 4
+
+    ros2 launch slam_toolbox online_async_launch.py params_file:=./src/f1_12th_simulator_g01/config/mapper_params_online_async.yaml use_sim_time:=true
